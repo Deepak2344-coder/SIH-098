@@ -3,339 +3,595 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Proxinotes</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap');
-
-  :root {
-    --cream: #f5f1e8;
-    --card: #fffdf7;
-    --ink: #1c3d5a;
-    --ink-soft: #2f5170;
-    --red: #c9432f;
-    --border: #d8cdb0;
-    --text: #2e2b24;
-    --text-muted: #706a5c;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background-color: var(--cream);
-    background-image:
-      linear-gradient(var(--border) 1px, transparent 1px);
-    background-size: 100% 32px;
-    background-position: 0 140px;
-    color: var(--text);
-    font-family: 'Inter', -apple-system, sans-serif;
-    line-height: 1.65;
-  }
-
-  .wrap {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 56px 24px 100px 24px;
-  }
-
-  /* Header / stamp */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-bottom: 56px;
-  }
-
-  .brand {
-    font-family: 'Lora', serif;
-    font-weight: 700;
-    font-size: 22px;
-    color: var(--ink);
-    letter-spacing: 0.3px;
-  }
-
-  .brand-sub {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 2px;
-  }
-
-  .stamp {
-    border: 2px solid var(--red);
-    color: var(--red);
-    border-radius: 4px;
-    padding: 8px 14px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    transform: rotate(-2deg);
-    white-space: nowrap;
-    font-family: 'Inter', sans-serif;
-  }
-
-  h1.title {
-    font-family: 'Lora', serif;
-    font-weight: 700;
-    font-size: clamp(32px, 5vw, 46px);
-    color: var(--ink);
-    margin: 0 0 8px 0;
-    line-height: 1.15;
-  }
-
-  .intro-line {
-    font-size: 16px;
-    color: var(--text-muted);
-    max-width: 640px;
-    margin-bottom: 48px;
-  }
-
-  /* Table of contents */
-  nav.toc {
-    background-color: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 20px 24px;
-    margin-bottom: 56px;
-  }
-
-  nav.toc .toc-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-muted);
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  nav.toc ol {
-    margin: 0;
-    padding-left: 20px;
-    columns: 2;
-    column-gap: 32px;
-  }
-
-  nav.toc li { margin-bottom: 6px; break-inside: avoid; }
-
-  nav.toc a {
-    color: var(--ink-soft);
-    text-decoration: none;
-    font-size: 14.5px;
-  }
-
-  nav.toc a:hover { color: var(--red); text-decoration: underline; }
-
-  /* Sections */
-  section {
-    margin-bottom: 48px;
-    scroll-margin-top: 24px;
-  }
-
-  .section-head {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    margin-bottom: 14px;
-  }
-
-  .section-num {
-    font-family: 'Lora', serif;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--red);
-    min-width: 26px;
-  }
-
-  h2 {
-    font-family: 'Lora', serif;
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--ink);
-    margin: 0;
-  }
-
-  section p, section li {
-    font-size: 15.5px;
-    color: var(--text);
-  }
-
-  section ul {
-    padding-left: 22px;
-  }
-
-  section li { margin-bottom: 8px; }
-
-  strong { color: var(--ink); }
-
-  .card-note {
-    background-color: var(--card);
-    border-left: 3px solid var(--ink);
-    border-radius: 4px;
-    padding: 14px 18px;
-    font-size: 14.5px;
-    color: var(--text-muted);
-    margin-top: 16px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 12px;
-    font-size: 14.5px;
-    background-color: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  th, td {
-    text-align: left;
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  th {
-    background-color: var(--cream);
-    color: var(--ink);
-    font-weight: 600;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  tr:last-child td { border-bottom: none; }
-
-  footer {
-    border-top: 1px dashed var(--border);
-    padding-top: 28px;
-    margin-top: 64px;
-    font-size: 13.5px;
-    color: var(--text-muted);
-    text-align: center;
-  }
-
-  a { color: var(--ink-soft); }
-
-  @media (max-width: 640px) {
-    nav.toc ol { columns: 1; }
-    header { flex-direction: column; }
-  }
-</style>
+<title>Integrated Precision Guidance Architecture</title>
+<meta name="description" content="SIH-2026 Research Proposal — A spin-stabilized body with a despun, self-powered, sensor-rich guidance nose. Six coupled subsystems, one architectural bet.">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js" defer></script>
 </head>
 <body>
-<div class="wrap">
 
-  <header>
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <div class="brand">IPGA // SIH-2026</div>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="navlinks">
+      <a href="#hardware">Hardware</a>
+      <a href="#pillars">Pillars</a>
+      <a href="#specs">Specs</a>
+      <a href="#synergy">Synergy</a>
+      <a href="#3d-model">3D Model</a>
+      <a href="#plan">Demo Plan</a>
+      <a href="#team">Team</a>
+      <a href="#appendix">Pitch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-inner">
     <div>
-      <div class="brand">Proxinotes</div>
-      <div class="brand-sub">Your college. Your course. Your notes.</div>
+      <div class="tag">SMART INDIA HACKATHON — CONCEPTUAL RESEARCH PROPOSAL</div>
+      <h1 class="title">Integrated Precision Guidance Architecture</h1>
+      <p class="lede">A spin-stabilized body paired with a despun, self-powered, sensor-rich guidance nose — six coupled subsystems, one architectural bet.</p>
+      <div class="pill-row">
+        <span class="pill">6 PILLARS</span>
+        <span class="pill">6-DOF SIMULATION</span>
+        <span class="pill">HARDWARE-IN-THE-LOOP</span>
+      </div>
     </div>
-    <div class="stamp">Effective — 20 Jul 2026</div>
-  </header>
+    <svg class="schematic" viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="230" cy="130" rx="90" ry="46" fill="none" stroke-width="1.4" class="highlight"/>
+      <path d="M 140 130 Q 60 130 30 130" fill="none" stroke-width="1.4"/>
+      <path d="M 30 130 L 60 100 L 140 108 L 140 152 L 60 160 Z" fill="none" stroke-width="1.3" class="highlight"/>
+      <line x1="140" y1="90" x2="140" y2="172" stroke-dasharray="3 3"/>
+      <circle cx="140" cy="130" r="9" fill="none" stroke-width="1.2" class="highlight"/>
+      <line x1="60" y1="112" x2="60" y2="70"/>
+      <text x="20" y="62" class="lbl">EDTS — terminal seeker</text>
+      <line x1="140" y1="90" x2="140" y2="40"/>
+      <text x="98" y="32" class="lbl">DNA — bearing / despin interface</text>
+      <line x1="230" y1="84" x2="230" y2="40"/>
+      <text x="190" y="32">SHAF-G coupling zone</text>
+      <line x1="230" y1="176" x2="230" y2="220"/>
+      <text x="185" y="234">LMTS reservoir + channels</text>
+      <line x1="290" y1="130" x2="325" y2="130"/>
+      <text x="278" y="150">CSMN uplink</text>
+    </svg>
+  </div>
+</header>
 
-  <h1 class="title">Privacy Policy</h1>
-  <p class="intro-line">
-    This page explains what information Proxinotes collects, why, and how
-    it's handled. We've kept it as short and plain as the subject allows.
-  </p>
+<!-- NOVELTY -->
+<section id="novelty" class="reveal">
+  <div class="wrap">
+    <div class="kicker">01 — NOVELTY</div>
+    <h2>The novelty isn't a component. It's the architecture.</h2>
+    <p class="intro">Conventional kits bolt sensing and control onto a rapidly spinning shell. This proposal removes the constraint instead of compensating for it — separating a low-spin guidance nose from the spin-stabilized carrier, then coupling power, perception, and coordination around that one decision.</p>
+  </div>
+</section>
 
-  <nav class="toc" aria-label="Table of contents">
-    <div class="toc-label">On this page</div>
-    <ol>
-      <li><a href="#collect">Information we collect</a></li>
-      <li><a href="#use">How we use it</a></li>
-      <li><a href="#third-party">Third-party services</a></li>
-      <li><a href="#storage">Storage & security</a></li>
-      <li><a href="#rights">Your rights & choices</a></li>
-      <li><a href="#retention">Data retention</a></li>
-      <li><a href="#children">Children's privacy</a></li>
-      <li><a href="#changes">Changes to this policy</a></li>
-      <li><a href="#contact">Contact us</a></li>
-    </ol>
-  </nav>
-
-  <section id="collect">
-    <div class="section-head"><span class="section-num">01</span><h2>Information we collect</h2></div>
-    <p>When you use Proxinotes, we collect only what's needed to run your account and deliver the content you've paid for:</p>
-    <ul>
-      <li><strong>Account information</strong> — your name and email address, provided when you sign in with Google.</li>
-      <li><strong>Payment information</strong> — handled entirely by Razorpay, our payment processor. We never see or store your card, UPI ID, or bank details directly.</li>
-      <li><strong>Usage information</strong> — which subjects/chapters you've unlocked and accessed, so we can keep your subscriptions and reading progress in sync.</li>
-      <li><strong>Device information</strong> — basic technical data (device type, app version) used only for debugging and app stability, never for tracking.</li>
-    </ul>
-  </section>
-
-  <section id="use">
-    <div class="section-head"><span class="section-num">02</span><h2>How we use it</h2></div>
-    <ul>
-      <li>To create and maintain your account</li>
-      <li>To process payments and activate your subscriptions</li>
-      <li>To deliver the correct notes for your college, course, and subjects</li>
-      <li>To send essential account and payment emails (receipts, renewal reminders)</li>
-      <li>To fix bugs and improve app reliability</li>
-    </ul>
-    <p>We do not use your data for advertising, and we do not sell your information to anyone, ever.</p>
-  </section>
-
-  <section id="third-party">
-    <div class="section-head"><span class="section-num">03</span><h2>Third-party services</h2></div>
-    <p>We rely on a small set of trusted providers to run Proxinotes. Each only receives the minimum data it needs to do its job:</p>
-    <table>
-      <tr><th>Service</th><th>Purpose</th><th>Data shared</th></tr>
-      <tr><td>Google Sign-In</td><td>Account creation & login</td><td>Name, email</td></tr>
-      <tr><td>Razorpay</td><td>Payment processing</td><td>Payment details (handled directly by Razorpay)</td></tr>
-      <tr><td>Supabase</td><td>Backend & database</td><td>Account and usage data</td></tr>
-      <tr><td>Cloudinary</td><td>Content delivery</td><td>No personal data — content images only</td></tr>
-      <tr><td>Firebase Cloud Messaging</td><td>Push notifications</td><td>Device notification token</td></tr>
-      <tr><td>Brevo</td><td>Transactional email</td><td>Email address, for receipts/notifications</td></tr>
-    </table>
-  </section>
-
-  <section id="storage">
-    <div class="section-head"><span class="section-num">04</span><h2>Storage & security</h2></div>
-    <p>Notes content is delivered through an authenticated, per-page image pipeline — raw files never reach your device directly. Each page you view carries a watermark tied to your account, to protect the material you've paid for from unauthorized sharing.</p>
-    <div class="card-note">
-      We take reasonable, industry-standard measures to protect your data, but no system is perfectly secure. If you ever notice something that looks wrong with your account, contact us right away.
+<!-- HARDWARE GALLERY -->
+<section id="hardware" class="reveal">
+  <div class="wrap">
+    <div class="kicker">02 — HARDWARE EVIDENCE</div>
+    <h2>From concept to physical proof</h2>
+    <p class="intro">CAD renders, prototype components, and test bench setups demonstrating each subsystem's physical realization.</p>
+    <div class="gallery-grid">
+      <div class="gallery-card" data-lightbox="assets/images/cad-nose-assembly.jpg">
+        <div class="gallery-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>CAD Nose Assembly</span>
+        </div>
+        <div class="gallery-label">DNA — Despun Nose Cross-Section</div>
+      </div>
+      <div class="gallery-card" data-lightbox="assets/images/bearing-interface.jpg">
+        <div class="gallery-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>Bearing Interface</span>
+        </div>
+        <div class="gallery-label">Bearing Interface — Physical Prototype</div>
+      </div>
+      <div class="gallery-card" data-lightbox="assets/images/generator-bench.jpg">
+        <div class="gallery-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>Generator Bench Test</span>
+        </div>
+        <div class="gallery-label">SHAF-G — Rotating Generator Bench</div>
+      </div>
+      <div class="gallery-card" data-lightbox="assets/images/sensor-array.jpg">
+        <div class="gallery-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>Event Sensor Array</span>
+        </div>
+        <div class="gallery-label">EDTS — Neuromorphic Sensor Module</div>
+      </div>
+      <div class="gallery-card" data-lightbox="assets/images/lmts-prototype.jpg">
+        <div class="gallery-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>LMTS Channel System</span>
+        </div>
+        <div class="gallery-label">LMTS — Fluid Channel Prototype</div>
+      </div>
+      <div class="gallery-card" data-lightbox="assets/images/mesh-node.jpg">
+        <div class="gallery-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>Mesh Network Node</span>
+        </div>
+        <div class="gallery-label">CSMN — Communication Node PCB</div>
+      </div>
     </div>
-  </section>
+    <p class="gallery-note">Replace placeholder images in <code>assets/images/</code> with your actual hardware photos and CAD renders.</p>
+  </div>
+</section>
 
-  <section id="rights">
-    <div class="section-head"><span class="section-num">05</span><h2>Your rights & choices</h2></div>
-    <ul>
-      <li>You can request a copy of the data we hold about you</li>
-      <li>You can request correction of inaccurate account details</li>
-      <li>You can request deletion of your account and associated data, subject to what we're required to retain for payment/legal records</li>
-    </ul>
-    <p>To exercise any of these, just reach out — see <a href="#contact">Contact us</a> below.</p>
-  </section>
+<!-- 3D MODEL VIEWER -->
+<section id="3d-model" class="reveal">
+  <div class="wrap">
+    <div class="kicker">03 — INTERACTIVE MODEL</div>
+    <h2>Inspect the architecture in 3D</h2>
+    <p class="intro">Rotate, zoom, and explore the integrated nose assembly. Upload your <code>.glb</code> export to <code>assets/models/</code> to activate.</p>
+    <div class="model-viewer-container">
+      <model-viewer
+        id="cad-viewer"
+        alt="IPGA Nose Assembly 3D Model"
+        camera-controls
+        auto-rotate
+        rotation-per-second="30deg"
+        shadow-intensity="1"
+        camera-orbit="45deg 55deg 2.5m"
+        min-camera-orbit="auto auto 1.5m"
+        max-camera-orbit="Infinity Infinity 5m"
+        style="width:100%; height:500px; background:#161E22;"
+      >
+        <div class="model-placeholder" slot="poster">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <p>Upload your .glb model to<br><code>assets/models/nose-assembly.glb</code></p>
+          <p class="model-hint">Then update the <code>src</code> attribute in index.html</p>
+        </div>
+      </model-viewer>
+      <div class="model-controls">
+        <button class="model-btn" data-orbit="0deg 90deg 2m">Top View</button>
+        <button class="model-btn" data-orbit="0deg 0deg 2.5m">Side View</button>
+        <button class="model-btn" data-orbit="90deg 75deg 2.5m">Perspective</button>
+        <button class="model-btn" data-orbit="180deg 55deg 3m">Rear View</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section id="retention">
-    <div class="section-head"><span class="section-num">06</span><h2>Data retention</h2></div>
-    <p>We keep your account data for as long as your account is active. If you delete your account, we remove your personal data within a reasonable period, except where we're required to retain payment records for legal or tax purposes.</p>
-  </section>
+<!-- PILLARS -->
+<section id="pillars" class="reveal">
+  <div class="wrap">
+    <div class="kicker">04 — ARCHITECTURAL PILLARS</div>
+    <h2>Six mutually reinforcing subsystems</h2>
+    <div class="pillars">
 
-  <section id="children">
-    <div class="section-head"><span class="section-num">07</span><h2>Children's privacy</h2></div>
-    <p>Proxinotes is built for college students and is not intended for children under 13. We do not knowingly collect data from anyone under this age.</p>
-  </section>
+      <div class="pillar">
+        <div class="p-diagram">
+          <svg viewBox="0 0 120 100">
+            <circle cx="60" cy="50" r="38" class="d-line"/>
+            <circle cx="60" cy="50" r="24" class="d-hi"/>
+            <circle cx="60" cy="50" r="24" class="d-line" stroke-dasharray="2 4"/>
+            <circle cx="60" cy="18" r="3" class="d-line"/>
+            <circle cx="88" cy="34" r="3" class="d-line"/>
+            <circle cx="88" cy="66" r="3" class="d-line"/>
+            <circle cx="60" cy="82" r="3" class="d-line"/>
+            <circle cx="32" cy="66" r="3" class="d-line"/>
+            <circle cx="32" cy="34" r="3" class="d-line"/>
+            <line x1="60" y1="50" x2="60" y2="12" class="d-amber"/>
+          </svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top"><span class="p-num">01</span><span class="p-name">Despun Nose Architecture</span><span class="p-code">DNA</span></div>
+          <div class="p-detail">Mechanically isolated guidance section providing a stable reference frame for sensing and control after muzzle exit.</div>
+        </div>
+      </div>
 
-  <section id="changes">
-    <div class="section-head"><span class="section-num">08</span><h2>Changes to this policy</h2></div>
-    <p>If this policy changes, we'll update the date at the top of this page. Significant changes will be communicated in-app or by email.</p>
-  </section>
+      <div class="pillar">
+        <div class="p-diagram">
+          <svg viewBox="0 0 120 100">
+            <circle cx="60" cy="50" r="14" class="d-hi"/>
+            <line x1="60" y1="36" x2="60" y2="10" class="d-line"/>
+            <line x1="60" y1="64" x2="60" y2="90" class="d-line"/>
+            <line x1="46" y1="50" x2="16" y2="50" class="d-line"/>
+            <line x1="74" y1="50" x2="104" y2="50" class="d-line"/>
+            <line x1="50" y1="40" x2="26" y2="20" class="d-line"/>
+            <line x1="70" y1="60" x2="94" y2="80" class="d-line"/>
+            <circle cx="60" cy="50" r="4" class="d-amber"/>
+          </svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top"><span class="p-num">02</span><span class="p-name">Liquid Mass Transfer Steering</span><span class="p-code">LMTS</span></div>
+          <div class="p-detail">Internal redistribution of dense working mass for coarse steering moments, reducing reliance on exposed external actuators.</div>
+        </div>
+      </div>
 
-  <section id="contact">
-    <div class="section-head"><span class="section-num">09</span><h2>Contact us</h2></div>
-    <p>Questions about this policy or your data? Reach us at <strong>proxinotes@gmail.com</strong>.</p>
-  </section>
+      <div class="pillar">
+        <div class="p-diagram">
+          <svg viewBox="0 0 120 100">
+            <rect x="20" y="20" width="80" height="60" class="d-line"/>
+            <g class="d-hi">
+              <circle cx="36" cy="34" r="2"/><circle cx="52" cy="30" r="2"/><circle cx="70" cy="40" r="2"/>
+              <circle cx="84" cy="28" r="2"/><circle cx="30" cy="55" r="2"/><circle cx="60" cy="58" r="2"/>
+              <circle cx="78" cy="62" r="2"/><circle cx="44" cy="70" r="2"/><circle cx="90" cy="50" r="2"/>
+            </g>
+            <line x1="20" y1="40" x2="100" y2="40" class="d-line" stroke-dasharray="1 3"/>
+            <line x1="20" y1="60" x2="100" y2="60" class="d-line" stroke-dasharray="1 3"/>
+          </svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top"><span class="p-num">03</span><span class="p-name">Event-Driven Terminal Seeker</span><span class="p-code">EDTS</span></div>
+          <div class="p-detail">Low-latency neuromorphic-vision concept for terminal recognition when satellite navigation is degraded.</div>
+        </div>
+      </div>
 
-  <footer>
-    Proxinotes &middot; Made for students, by students
-  </footer>
+      <div class="pillar">
+        <div class="p-diagram">
+          <svg viewBox="0 0 120 100">
+            <circle cx="60" cy="50" r="34" class="d-line"/>
+            <circle cx="60" cy="50" r="20" class="d-hi" stroke-dasharray="4 3"/>
+            <g class="d-amber">
+              <line x1="60" y1="16" x2="60" y2="26"/>
+              <line x1="94" y1="50" x2="84" y2="50"/>
+              <line x1="60" y1="84" x2="60" y2="74"/>
+              <line x1="26" y1="50" x2="36" y2="50"/>
+            </g>
+            <circle cx="60" cy="50" r="5" class="d-line"/>
+          </svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top"><span class="p-num">04</span><span class="p-name">Spin-Harvesting Axial-Flux Generator</span><span class="p-code">SHAF-G</span></div>
+          <div class="p-detail">Integrated generator converting relative shell–nose rotation into electrical power for transient loads.</div>
+        </div>
+      </div>
 
+      <div class="pillar">
+        <div class="p-diagram">
+          <svg viewBox="0 0 120 100">
+            <g class="d-line">
+              <line x1="30" y1="30" x2="60" y2="20"/>
+              <line x1="60" y1="20" x2="92" y2="34"/>
+              <line x1="30" y1="30" x2="40" y2="70"/>
+              <line x1="92" y1="34" x2="84" y2="72"/>
+              <line x1="40" y1="70" x2="84" y2="72"/>
+              <line x1="60" y1="20" x2="40" y2="70"/>
+              <line x1="60" y1="20" x2="84" y2="72"/>
+            </g>
+            <circle cx="30" cy="30" r="4" class="d-hi"/>
+            <circle cx="60" cy="20" r="4" class="d-amber"/>
+            <circle cx="92" cy="34" r="4" class="d-hi"/>
+            <circle cx="40" cy="70" r="4" class="d-hi"/>
+            <circle cx="84" cy="72" r="4" class="d-hi"/>
+          </svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top"><span class="p-num">05</span><span class="p-name">Cooperative Swarm Mesh Network</span><span class="p-code">CSMN</span></div>
+          <div class="p-detail">Salvo-level coordination layer sharing navigation and environmental estimates across nodes.</div>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="p-diagram">
+          <svg viewBox="0 0 120 100">
+            <path d="M 20 70 Q 60 20 100 70" class="d-line"/>
+            <path d="M 20 76 Q 60 28 100 76" class="d-hi"/>
+            <path d="M 20 82 Q 60 36 100 82" class="d-line" stroke-dasharray="3 3"/>
+            <line x1="60" y1="20" x2="60" y2="90" class="d-amber" stroke-dasharray="2 3"/>
+          </svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top"><span class="p-num">06</span><span class="p-name">Metamaterial Conformal Multi-Function Aperture</span><span class="p-code">MCMA</span></div>
+          <div class="p-detail">Structural nose concept combining radome, antenna, shielding, and load-bearing functions in one surface.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL SPECS -->
+<section id="specs" class="reveal">
+  <div class="wrap">
+    <div class="kicker">05 — TECHNICAL SPECIFICATIONS</div>
+    <h2>Subsystem performance parameters</h2>
+    <div class="specs-table-wrap">
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th>Subsystem</th>
+            <th>Parameter</th>
+            <th>Target Value</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2"><span class="spec-code">DNA</span> Despun Nose</td>
+            <td>Residual spin rate</td>
+            <td>&lt; 5 RPM</td>
+            <td><span class="status-badge design">Design</span></td>
+          </tr>
+          <tr>
+            <td>Bearing load capacity</td>
+            <td>200 N axial</td>
+            <td><span class="status-badge design">Design</span></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><span class="spec-code">LMTS</span> Liquid Steering</td>
+            <td>Steering torque</td>
+            <td>0.8 Nm @ 200ml</td>
+            <td><span class="status-badge design">Design</span></td>
+          </tr>
+          <tr>
+            <td>Response time</td>
+            <td>&lt; 50ms</td>
+            <td><span class="status-badge design">Design</span></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><span class="spec-code">EDTS</span> Terminal Seeker</td>
+            <td>Event-to-decision latency</td>
+            <td>&lt; 2ms</td>
+            <td><span class="status-badge simulation">Simulation</span></td>
+          </tr>
+          <tr>
+            <td>Target recognition accuracy</td>
+            <td>&gt; 92%</td>
+            <td><span class="status-badge simulation">Simulation</span></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><span class="spec-code">SHAF-G</span> Axial-Flux Gen</td>
+            <td>Peak power output</td>
+            <td>12W @ 3000 RPM</td>
+            <td><span class="status-badge prototype">Prototype</span></td>
+          </tr>
+          <tr>
+            <td>Generator efficiency</td>
+            <td>&gt; 78%</td>
+            <td><span class="status-badge prototype">Prototype</span></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><span class="spec-code">CSMN</span> Swarm Mesh</td>
+            <td>Active mesh nodes</td>
+            <td>5+ simultaneous</td>
+            <td><span class="status-badge simulation">Simulation</span></td>
+          </tr>
+          <tr>
+            <td>Fusion accuracy gain</td>
+            <td>&gt; 40% vs single-node</td>
+            <td><span class="status-badge simulation">Simulation</span></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><span class="spec-code">MCMA</span> Conformal Aperture</td>
+            <td>Frequency range</td>
+            <td>X-band (8–12 GHz)</td>
+            <td><span class="status-badge design">Design</span></td>
+          </tr>
+          <tr>
+            <td>Radar cross-section</td>
+            <td>Structural integration</td>
+            <td><span class="status-badge design">Design</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="specs-legend">
+      <span class="legend-item"><span class="status-badge design">Design</span> Simulation/analytical</span>
+      <span class="legend-item"><span class="status-badge simulation">Simulation</span> Validated in sim</span>
+      <span class="legend-item"><span class="status-badge prototype">Prototype</span> Hardware tested</span>
+    </div>
+  </div>
+</section>
+
+<!-- SYNERGY -->
+<section id="synergy" class="reveal">
+  <div class="wrap">
+    <div class="kicker">06 — SYSTEM SYNERGY</div>
+    <h2>Removing bottlenecks, not stacking features</h2>
+    <div class="synergy">
+      <div class="cell"><div class="from">DNA → EDTS / SHAF-G / MCMA</div><div class="effect">Stable sensing reference, usable relative rotation, better antenna integration.</div></div>
+      <div class="cell"><div class="from">SHAF-G → EDTS / CSMN</div><div class="effect">Energy buffer for perception and communications loads.</div></div>
+      <div class="cell"><div class="from">MCMA → CSMN / LMTS</div><div class="effect">More internal volume and integrated EM interfaces.</div></div>
+      <div class="cell"><div class="from">LMTS → DNA / fine control</div><div class="effect">Coarse correction with less exposed actuation.</div></div>
+      <div class="cell"><div class="from">EDTS → Terminal guidance</div><div class="effect">Observation beyond a single navigation source.</div></div>
+      <div class="cell"><div class="from">CSMN → All functions</div><div class="effect">Shared state estimation and graceful degradation.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section id="video" class="reveal">
+  <div class="wrap">
+    <div class="kicker">07 — PROJECT WALKTHROUGH</div>
+    <h2>See the system in action</h2>
+    <p class="intro">A 60–90 second overview of the IPGA concept, simulation results, and bench test highlights.</p>
+    <div class="video-container">
+      <!-- Replace VIDEO_ID with your YouTube video ID, or use Vimeo embed -->
+      <div class="video-placeholder" id="video-embed">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <p>Video embed — replace with your YouTube/Vimeo link</p>
+        <p class="video-hint">Uncomment the iframe below in index.html and paste your video URL</p>
+        <!-- Uncomment and replace VIDEO_ID with your actual YouTube video ID:
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO PLAN -->
+<section id="plan" class="reveal">
+  <div class="wrap">
+    <div class="kicker">08 — DEMONSTRATION PLAN</div>
+    <h2>What we actually build and prove for SIH</h2>
+    <div class="stages">
+      <div class="stage"><div class="snum"></div><div><div class="stitle">Architecture — CAD cross-section</div><div class="sdesc">Nose, bearing interface, channels, generator, conformal aperture. Produces mass, volume, and failure-mode map.</div></div><span class="badge">ESSENTIAL</span></div>
+      <div class="stage"><div class="snum"></div><div><div class="stitle">Dynamics — 6-DOF simulation</div><div class="sdesc">Explicit despin and control phases. Produces trajectory error and stability margins.</div></div><span class="badge">ESSENTIAL</span></div>
+      <div class="stage"><div class="snum"></div><div><div class="stitle">Power — generator bench test</div><div class="sdesc">Scaled rotating-interface generator. Voltage, efficiency, temperature, torque data.</div></div><span class="badge">HIGH</span></div>
+      <div class="stage"><div class="snum"></div><div><div class="stitle">Perception — event-stream prototype</div><div class="sdesc">Edge-inference on recorded event data. Latency, accuracy, false-positive rate.</div></div><span class="badge">HIGH</span></div>
+      <div class="stage"><div class="snum"></div><div><div class="stitle">Networking — multi-node simulator</div><div class="sdesc">Safe laboratory mesh. Fusion benefit under noise, bias, packet loss.</div></div><span class="badge">HIGH</span></div>
+      <div class="stage"><div class="snum"></div><div><div class="stitle">Integration — hardware-in-the-loop</div><div class="sdesc">Injected faults across mode transitions. Reproducibility evidence.</div></div><span class="badge">ESSENTIAL</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT TIMELINE -->
+<section id="timeline" class="reveal">
+  <div class="wrap">
+    <div class="kicker">09 — PROJECT TIMELINE</div>
+    <h2>Milestones &amp; progress</h2>
+    <div class="timeline">
+      <div class="timeline-item completed">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Phase 1 — Complete</div>
+          <h3>Concept &amp; Literature Review</h3>
+          <p>Architecture defined, prior art analyzed, subsystem requirements locked.</p>
+        </div>
+      </div>
+      <div class="timeline-item completed">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Phase 2 — Complete</div>
+          <h3>CAD Design &amp; Cross-Section</h3>
+          <p>Full nose assembly modeled. Mass, volume, and failure-mode map produced.</p>
+        </div>
+      </div>
+      <div class="timeline-item active">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Phase 3 — In Progress</div>
+          <h3>Simulation &amp; Prototyping</h3>
+          <p>6-DOF dynamics simulation running. Generator bench test setup underway.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Phase 4 — Planned</div>
+          <h3>Subsystem Integration</h3>
+          <p>Hardware-in-the-loop testing. Fault injection and mode transition validation.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Phase 5 — Planned</div>
+          <h3>Final Demo &amp; Documentation</h3>
+          <p>Integrated system demonstration. Paper submission and presentation prep.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="reveal">
+  <div class="wrap">
+    <div class="kicker">10 — THE TEAM</div>
+    <h2>People behind the architecture</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Team Member 1</div>
+        <div class="team-role">Project Lead / Systems Architect</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Team Member 2</div>
+        <div class="team-role">Simulation &amp; Dynamics</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Team Member 3</div>
+        <div class="team-role">Hardware &amp; Prototyping</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Team Member 4</div>
+        <div class="team-role">Electronics &amp; Comms</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Team Member 5</div>
+        <div class="team-role">Software &amp; Mesh Network</div>
+      </div>
+      <div class="team-card mentor">
+        <div class="team-avatar">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="team-name">Mentor / Advisor</div>
+        <div class="team-role">Faculty Guide — Institution Name</div>
+      </div>
+    </div>
+    <p class="gallery-note">Replace placeholder names and roles with your actual team. Add photos to <code>assets/images/</code>.</p>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section id="downloads" class="reveal">
+  <div class="wrap">
+    <div class="kicker">11 — RESOURCES</div>
+    <h2>Download project materials</h2>
+    <div class="downloads-grid">
+      <a href="downloads/ipga-paper.pdf" class="download-card" target="_blank">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <div class="download-label">Research Paper</div>
+        <div class="download-hint">PDF — Full architecture proposal</div>
+      </a>
+      <a href="downloads/ipga-presentation.pdf" class="download-card" target="_blank">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div class="download-label">Presentation Deck</div>
+        <div class="download-hint">PDF — Judge presentation slides</div>
+      </a>
+      <a href="https://github.com" class="download-card" target="_blank">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <div class="download-label">Source Code</div>
+        <div class="download-hint">GitHub — Simulation &amp; toolchain</div>
+      </a>
+      <a href="downloads/ipga-cad.zip" class="download-card" target="_blank">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <div class="download-label">CAD Files</div>
+        <div class="download-hint">ZIP — Assembly &amp; component models</div>
+      </a>
+    </div>
+    <p class="gallery-note">Place your files in <code>downloads/</code> and update the href attributes above.</p>
+  </div>
+</section>
+
+<!-- APPENDIX / PITCH -->
+<section id="appendix" class="reveal" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="kicker">12 — APPENDIX</div>
+    <h2>One-page judge pitch</h2>
+    <div class="pitch-card">
+      <div class="pitch-row"><div class="k">PROBLEM</div><div class="v">High-dynamics spinning platforms force sensing, control, power, and comms to share one difficult reference frame.</div></div>
+      <div class="pitch-row"><div class="k">SOLUTION</div><div class="v">Separate the guidance reference frame, integrate major functions into the nose, coordinate through phased control and cooperative estimation.</div></div>
+      <div class="pitch-row"><div class="k">PROOF</div><div class="v">CAD, 6-DOF simulation, rotating-interface power test, event-based perception, multi-node estimator.</div></div>
+      <div class="pitch-row"><div class="k">NOVELTY</div><div class="v">A spin-stabilized body with a stable, self-powered, sensor-rich, network-aware guidance layer — the innovation is the synergy, not any one part.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>CONCEPTUAL ACADEMIC PROPOSAL · VERSION 1.0 · REQUIRES SIMULATION, LAB TESTING, AND EXPERT REVIEW BEFORE ANY FIELD USE</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
