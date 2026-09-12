@@ -64,8 +64,23 @@
     });
   }
 
-  /* ── 3D Model Viewer Preset Orbits ─────────────────────────── */
+  /* ── 3D Model Viewer: file://-safe GLB source ────────────────
+     model-viewer fetches `src` over HTTP, which file:// pages block
+     via CORS. shell-data.js (shared with simulations/shell-viewer)
+     loads as a classic script even from file://, so decode its
+     embedded base64 into a Blob URL — no server, no duplication. */
   const cadViewer = document.getElementById('cad-viewer');
+  if (cadViewer && window.SHELL_GLB_BASE64) {
+    try {
+      const bin = atob(window.SHELL_GLB_BASE64);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      const blobUrl = URL.createObjectURL(new Blob([bytes], { type: 'model/gltf-binary' }));
+      cadViewer.setAttribute('src', blobUrl);
+    } catch (err) {
+      /* keep the static assets/models/ArtilleryShell.glb src (server contexts) */
+    }
+  }
   if (cadViewer) {
     document.querySelectorAll('.model-btn').forEach(btn => {
       btn.addEventListener('click', () => {

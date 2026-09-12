@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Artillery Shell — 3D Viewer</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app"></div>
+
+<header id="panel-title" class="panel">
+  <h1>ARTILLERY <span>SHELL</span></h1>
+  <p>Interactive 3D viewer. Hull finished in military green, stabilizing wings in polished silver. <b>Drag to orbit</b> &middot; <b>scroll to zoom</b>.</p>
+</header>
+
+<section id="panel-parts" class="panel">
+  <h2>Components</h2>
+  <ul>
+    <li><i style="--c:#4b5320"></i> Tip / Nose / Shoulder</li>
+    <li><i style="--c:#4b5320"></i> Body / Lower section</li>
+    <li><i style="--c:#4b5320"></i> Base ring</li>
+    <li><i style="--c:#c8ccd2"></i> Stabilizing wings &times;2</li>
+  </ul>
+  <p class="note">Military-green hull &middot; silver wings.<br/>Model: Shell.glb (embedded).</p>
+</section>
+
+<section id="panel-controls" class="panel">
+  <h2>Controls</h2>
+  <div class="btn-row">
+    <label class="chk"><input id="chk-turn" type="checkbox" checked/> Turntable</label>
+    <label class="chk"><input id="chk-labels" type="checkbox" checked/> Part labels</label>
+  </div>
+  <div class="btn-row">
+    <button id="btn-reset" class="btn">Reset view</button>
+  </div>
+  <p class="note" id="load-note">Loading model&hellip;</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="js/shell-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

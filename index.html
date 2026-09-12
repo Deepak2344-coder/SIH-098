@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Integrated Precision Guidance Architecture</title>
-<meta name="description" content="SIH-2026 Research Proposal — A spin-stabilized body with a despun, self-powered, sensor-rich guidance nose. Six coupled subsystems, one architectural bet.">
+<meta name="description" content="SIH-2026 Research Proposal — A spin-stabilized body with a despun, self-powered, sensor-rich guidance nose. Seven coupled subsystems, interactive simulations, and a safety-bounded evidence plan.">
 <link rel="stylesheet" href="styles.css">
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js" defer></script>
 </head>
@@ -18,10 +18,10 @@
       <span></span><span></span><span></span>
     </button>
     <div class="navlinks">
-      <a href="#hardware">Hardware</a>
+      <a href="#research">Research</a>
       <a href="#pillars">Pillars</a>
       <a href="#specs">Specs</a>
-      <a href="#synergy">Synergy</a>
+      <a href="#simulations">Simulations</a>
       <a href="#3d-model">3D Model</a>
       <a href="#plan">Demo Plan</a>
       <a href="#team">Team</a>
@@ -36,9 +36,10 @@
     <div>
       <div class="tag">SMART INDIA HACKATHON — CONCEPTUAL RESEARCH PROPOSAL</div>
       <h1 class="title">Integrated Precision Guidance Architecture</h1>
-      <p class="lede">A spin-stabilized body paired with a despun, self-powered, sensor-rich guidance nose — six coupled subsystems, one architectural bet.</p>
+      <p class="lede">A spin-stabilized body paired with a despun, self-powered, sensor-rich guidance nose — seven coupled subsystems, live browser simulations, one architectural bet.</p>
       <div class="pill-row">
-        <span class="pill">6 PILLARS</span>
+        <span class="pill">7 PILLARS</span>
+        <span class="pill">6 INTERACTIVE SIMS</span>
         <span class="pill">6-DOF SIMULATION</span>
         <span class="pill">HARDWARE-IN-THE-LOOP</span>
       </div>
@@ -69,13 +70,49 @@
     <div class="kicker">01 — NOVELTY</div>
     <h2>The novelty isn't a component. It's the architecture.</h2>
     <p class="intro">Conventional kits bolt sensing and control onto a rapidly spinning shell. This proposal removes the constraint instead of compensating for it — separating a low-spin guidance nose from the spin-stabilized carrier, then coupling power, perception, and coordination around that one decision.</p>
+    <div class="safety-note"><strong>SAFETY BOUNDARY —</strong> Inert laboratory demonstrators, simulation, environmental sensing, and controlled shutdown only. No explosive design, no engagement logic, no operational deployment guidance. Full text in the <a href="#research">research proposal</a>.</div>
+  </div>
+</section>
+
+<!-- RESEARCH PROPOSAL -->
+<section id="research" class="reveal">
+  <div class="wrap">
+    <div class="kicker">02 — RESEARCH FOUNDATION</div>
+    <h2>One proposal, seven pillars, seven testable phases</h2>
+    <p class="intro">The full 13-section research proposal (<code>IPGA-COMBINED-001 v2.0</code>) defines the design thesis, the evidence plan, and the safety case this website demonstrates. Thesis in one sentence: separate the sensing reference frame, recover useful energy from the motion that remains, fuse asynchronous observations conservatively, and end with safe environmental observation after a controlled event.</p>
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-num">§2–§4</div>
+        <div class="research-title">Design thesis &amp; pillars</div>
+        <div class="research-desc">Reference-frame transition (locked → despun), then mission-purpose transition (guidance → environmental monitoring). Seven pillars: DNA, LMTS, EDTS, SHAF-G, CSMN, MCMA, IDSES.</div>
+      </div>
+      <div class="research-card">
+        <div class="research-num">§3</div>
+        <div class="research-title">Concept of operations</div>
+        <div class="research-desc">Seven real-time phases: initialization → locked surrogate → despin study → nav handover → cooperative estimation → impact surrogate → monitoring &amp; shutdown.</div>
+      </div>
+      <div class="research-card">
+        <div class="research-num">§5</div>
+        <div class="research-title">Evidence plan</div>
+        <div class="research-desc">Eight work packages — CAD, 6-DOF Monte Carlo, rotating-rig tests, event perception, mesh fault-injection, shock survival, deployment, hardware-in-the-loop. Every claim ships with uncertainty.</div>
+      </div>
+      <div class="research-card">
+        <div class="research-num">§6–§7</div>
+        <div class="research-title">Risks, safety, roadmap</div>
+        <div class="research-desc">Risk register with the despin interface as critical path, NIST-aligned AI risk framing, inert-only interlocks, and a 6-stage SIH demonstration roadmap.</div>
+      </div>
+    </div>
+    <a class="pdf-btn" href="downloads/IPGA-Research-Proposal.pdf" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Read the full proposal — IPGA-Research-Proposal.pdf
+    </a>
   </div>
 </section>
 
 <!-- HARDWARE GALLERY -->
 <section id="hardware" class="reveal">
   <div class="wrap">
-    <div class="kicker">02 — HARDWARE EVIDENCE</div>
+    <div class="kicker">03 — HARDWARE EVIDENCE</div>
     <h2>From concept to physical proof</h2>
     <p class="intro">CAD renders, prototype components, and test bench setups demonstrating each subsystem's physical realization.</p>
     <div class="gallery-grid">
@@ -129,13 +166,14 @@
 <!-- 3D MODEL VIEWER -->
 <section id="3d-model" class="reveal">
   <div class="wrap">
-    <div class="kicker">03 — INTERACTIVE MODEL</div>
+    <div class="kicker">04 — INTERACTIVE MODEL</div>
     <h2>Inspect the architecture in 3D</h2>
-    <p class="intro">Rotate, zoom, and explore the integrated nose assembly. Upload your <code>.glb</code> export to <code>assets/models/</code> to activate.</p>
+    <p class="intro">Rotate, zoom, and explore the artillery shell assembly — the same <code>ArtilleryShell.glb</code> used across the simulations below. It loads from <code>assets/models/ArtilleryShell.glb</code>, with an embedded in-page fallback so it also renders when opened directly from file.</p>
     <div class="model-viewer-container">
       <model-viewer
         id="cad-viewer"
-        alt="IPGA Nose Assembly 3D Model"
+        alt="IPGA Artillery Shell 3D Model"
+        src="assets/models/ArtilleryShell.glb"
         camera-controls
         auto-rotate
         rotation-per-second="30deg"
@@ -147,8 +185,8 @@
       >
         <div class="model-placeholder" slot="poster">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-          <p>Upload your .glb model to<br><code>assets/models/nose-assembly.glb</code></p>
-          <p class="model-hint">Then update the <code>src</code> attribute in index.html</p>
+          <p>Loading artillery shell model…</p>
+          <p class="model-hint">Source: <code>assets/models/ArtilleryShell.glb</code> (copy of <code>simulations/FluxGenerator/ArtilleryShell.glb</code>)</p>
         </div>
       </model-viewer>
       <div class="model-controls">
@@ -164,8 +202,8 @@
 <!-- PILLARS -->
 <section id="pillars" class="reveal">
   <div class="wrap">
-    <div class="kicker">04 — ARCHITECTURAL PILLARS</div>
-    <h2>Six mutually reinforcing subsystems</h2>
+    <div class="kicker">05 — ARCHITECTURAL PILLARS</div>
+    <h2>Seven mutually reinforcing subsystems</h2>
     <div class="pillars">
 
       <div class="pillar">
@@ -287,6 +325,22 @@
         </div>
       </div>
 
+      <div class="pillar">
+        <div class="p-diagram">
+          <svg viewBox="0 0 120 100">
+            <circle cx="60" cy="38" r="22" class="d-line"/>
+            <circle cx="60" cy="38" r="12" class="d-hi"/>
+            <line x1="60" y1="60" x2="60" y2="90" class="d-line"/>
+            <line x1="48" y1="76" x2="72" y2="76" class="d-amber"/>
+            <line x1="52" y1="84" x2="68" y2="84" class="d-line" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top"><span class="p-num">07</span><span class="p-name">Impact-Survivable Deployable Environmental Sensor</span><span class="p-code">IDSES</span></div>
+          <div class="p-detail">Protected sensor carrier that survives a controlled impact surrogate, deploys a sensing head on passing self-check, monitors bounded environmental categories, then shuts down safely. Demonstrated live in Shell Strike below.</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -294,7 +348,7 @@
 <!-- TECHNICAL SPECS -->
 <section id="specs" class="reveal">
   <div class="wrap">
-    <div class="kicker">05 — TECHNICAL SPECIFICATIONS</div>
+    <div class="kicker">06 — TECHNICAL SPECIFICATIONS</div>
     <h2>Subsystem performance parameters</h2>
     <div class="specs-table-wrap">
       <table class="specs-table">
@@ -373,6 +427,17 @@
             <td>Structural integration</td>
             <td><span class="status-badge design">Design</span></td>
           </tr>
+          <tr>
+            <td rowspan="2"><span class="spec-code">IDSES</span> Env. Sensor</td>
+            <td>Shock-surrogate survival</td>
+            <td>Self-check → deploy / sealed</td>
+            <td><span class="status-badge simulation">Simulation</span></td>
+          </tr>
+          <tr>
+            <td>Monitor window</td>
+            <td>Bounded categories + safe shutdown</td>
+            <td><span class="status-badge simulation">Simulation</span></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -387,7 +452,7 @@
 <!-- SYNERGY -->
 <section id="synergy" class="reveal">
   <div class="wrap">
-    <div class="kicker">06 — SYSTEM SYNERGY</div>
+    <div class="kicker">07 — SYSTEM SYNERGY</div>
     <h2>Removing bottlenecks, not stacking features</h2>
     <div class="synergy">
       <div class="cell"><div class="from">DNA → EDTS / SHAF-G / MCMA</div><div class="effect">Stable sensing reference, usable relative rotation, better antenna integration.</div></div>
@@ -396,6 +461,9 @@
       <div class="cell"><div class="from">LMTS → DNA / fine control</div><div class="effect">Coarse correction with less exposed actuation.</div></div>
       <div class="cell"><div class="from">EDTS → Terminal guidance</div><div class="effect">Observation beyond a single navigation source.</div></div>
       <div class="cell"><div class="from">CSMN → All functions</div><div class="effect">Shared state estimation and graceful degradation.</div></div>
+      <div class="cell"><div class="from">P1–P6 → IDSES carrier</div><div class="effect">Stable, powered, networked platform delivers the sensor to its post-event mission.</div></div>
+      <div class="cell"><div class="from">IDSES → Safe demonstration</div><div class="effect">Bounded sensing, status packets, predictable shutdown — proof without harmful function.</div></div>
+      <div class="cell"><div class="from">HIL → All transitions</div><div class="effect">Fault injection across mode changes; no unsafe state reachable.</div></div>
     </div>
   </div>
 </section>
@@ -403,7 +471,7 @@
 <!-- VIDEO SECTION -->
 <section id="video" class="reveal">
   <div class="wrap">
-    <div class="kicker">07 — PROJECT WALKTHROUGH</div>
+    <div class="kicker">08 — PROJECT WALKTHROUGH</div>
     <h2>See the system in action</h2>
     <p class="intro">A 60–90 second overview of the IPGA concept, simulation results, and bench test highlights.</p>
     <div class="video-container">
@@ -420,10 +488,64 @@
   </div>
 </section>
 
+<!-- SIMULATIONS -->
+<section id="simulations" class="reveal">
+  <div class="wrap">
+    <div class="kicker">09 — INTERACTIVE SIMULATIONS</div>
+    <h2>Run the evidence yourself</h2>
+    <p class="intro">Each simulation lives in its own folder under <code>simulations/</code> — untouched, with all internal <code>css/</code> and <code>js/</code> connections intact. Open any card in a new tab: no build step, no local server, just a browser with internet access for the three.js CDN. The two GLB-based viewers carry their models embedded as base64, so they render straight from <code>file://</code>.</p>
+    <div class="sim-grid">
+      <div class="sim-card">
+        <div class="sim-top"><span class="p-code">DNA · Pillar 1</span><span class="sim-badge">3D · live</span></div>
+        <div class="sim-name">Eddy Brake</div>
+        <div class="sim-desc">Slotted aluminium ring vs. button magnet — engage the magnet and watch Lenz's-law braking torque drag the rotor to a creep while kinetic energy leaves as heat. The contactless damping behind the despin study.</div>
+        <div class="sim-meta"><code>simulations/eddy-brake/index.html</code></div>
+        <a class="open-btn" href="simulations/eddy-brake/index.html" target="_blank" rel="noopener">Open simulation ↗</a>
+      </div>
+      <div class="sim-card">
+        <div class="sim-top"><span class="p-code">SHAF-G · Pillar 4</span><span class="sim-badge">3D · live</span></div>
+        <div class="sim-name">Flux Generator Dynamo</div>
+        <div class="sim-desc">Spinning armature coil cutting the field between two poles — changing flux induces AC EMF (Faraday's law), rectified to DC for the bulb. Sweep RPM and field strength, watch flux vs. EMF on the scope.</div>
+        <div class="sim-meta"><code>simulations/dynamo/index.html</code></div>
+        <a class="open-btn" href="simulations/dynamo/index.html" target="_blank" rel="noopener">Open simulation ↗</a>
+      </div>
+      <div class="sim-card">
+        <div class="sim-top"><span class="p-code">LMTS · Pillar 2</span><span class="sim-badge">3D · live</span></div>
+        <div class="sim-name">Liquid Balance</div>
+        <div class="sim-desc">Three-chamber ballast rig on a centre pivot — pump liquid between LEFT, RIGHT and BOTTOM tanks and track the centre of mass. Flip to DYNAMIC and watch the cradle swing until the COM hangs below the pivot.</div>
+        <div class="sim-meta"><code>simulations/liquid-balance/index.html</code></div>
+        <a class="open-btn" href="simulations/liquid-balance/index.html" target="_blank" rel="noopener">Open simulation ↗</a>
+      </div>
+      <div class="sim-card">
+        <div class="sim-top"><span class="p-code">IDSES · Pillar 7</span><span class="sim-badge">3D · live</span></div>
+        <div class="sim-name">Shell Strike</div>
+        <div class="sim-desc">Fire the shell, scatter ultrasonic sensor pucks on impact, then watch the dormant carrier monitor its field until a patrol truck enters range. The full Phase-5 → Phase-6 concept of operations in one scene.</div>
+        <div class="sim-meta"><code>simulations/shell-strike/index.html</code></div>
+        <a class="open-btn" href="simulations/shell-strike/index.html" target="_blank" rel="noopener">Open simulation ↗</a>
+      </div>
+      <div class="sim-card">
+        <div class="sim-top"><span class="p-code">DNA · Airframe</span><span class="sim-badge">GLB embedded</span></div>
+        <div class="sim-name">Artillery Shell Viewer</div>
+        <div class="sim-desc">Orbit the military-green hull with silver stabilizing wings — tip, nose, body, base ring, all labelled on a turntable. Model travels embedded as base64 (<code>js/shell-data.js</code>), so it needs no server.</div>
+        <div class="sim-meta"><code>simulations/shell-viewer/index.html</code></div>
+        <a class="open-btn" href="simulations/shell-viewer/index.html" target="_blank" rel="noopener">Open viewer ↗</a>
+      </div>
+      <div class="sim-card">
+        <div class="sim-top"><span class="p-code">SHAF-G · Airframe</span><span class="sim-badge">GLB embedded</span></div>
+        <div class="sim-name">9-Part Shell Editor</div>
+        <div class="sim-desc">The full <code>ArtilleryShell.glb</code> — nine individually controllable parts with explode view, recolor, transparency, per-axis wing adjustment, undo/redo and session export. Built via <code>build-standalone.ps1</code> into one self-contained file.</div>
+        <div class="sim-meta"><code>simulations/FluxGenerator/standalone.html</code></div>
+        <a class="open-btn" href="simulations/FluxGenerator/standalone.html" target="_blank" rel="noopener">Open editor ↗</a>
+      </div>
+    </div>
+    <p class="gallery-note">GLB source of truth: <code>simulations/FluxGenerator/ArtilleryShell.glb</code> — mirrored at <code>assets/models/ArtilleryShell.glb</code> for the 3D section above.</p>
+  </div>
+</section>
+
 <!-- DEMO PLAN -->
 <section id="plan" class="reveal">
   <div class="wrap">
-    <div class="kicker">08 — DEMONSTRATION PLAN</div>
+    <div class="kicker">10 — DEMONSTRATION PLAN</div>
     <h2>What we actually build and prove for SIH</h2>
     <div class="stages">
       <div class="stage"><div class="snum"></div><div><div class="stitle">Architecture — CAD cross-section</div><div class="sdesc">Nose, bearing interface, channels, generator, conformal aperture. Produces mass, volume, and failure-mode map.</div></div><span class="badge">ESSENTIAL</span></div>
@@ -439,7 +561,7 @@
 <!-- PROJECT TIMELINE -->
 <section id="timeline" class="reveal">
   <div class="wrap">
-    <div class="kicker">09 — PROJECT TIMELINE</div>
+    <div class="kicker">11 — PROJECT TIMELINE</div>
     <h2>Milestones &amp; progress</h2>
     <div class="timeline">
       <div class="timeline-item completed">
@@ -489,7 +611,7 @@
 <!-- TEAM -->
 <section id="team" class="reveal">
   <div class="wrap">
-    <div class="kicker">10 — THE TEAM</div>
+    <div class="kicker">12 — THE TEAM</div>
     <h2>People behind the architecture</h2>
     <div class="team-grid">
       <div class="team-card">
@@ -542,28 +664,28 @@
 <!-- DOWNLOADS -->
 <section id="downloads" class="reveal">
   <div class="wrap">
-    <div class="kicker">11 — RESOURCES</div>
+    <div class="kicker">13 — RESOURCES</div>
     <h2>Download project materials</h2>
     <div class="downloads-grid">
-      <a href="downloads/ipga-paper.pdf" class="download-card" target="_blank">
+      <a href="downloads/IPGA-Research-Proposal.pdf" class="download-card" target="_blank">
         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        <div class="download-label">Research Paper</div>
-        <div class="download-hint">PDF — Full architecture proposal</div>
+        <div class="download-label">Research Proposal</div>
+        <div class="download-hint">PDF — IPGA-COMBINED-001 v2.0, 13 sections</div>
       </a>
-      <a href="downloads/ipga-presentation.pdf" class="download-card" target="_blank">
+      <a href="#appendix" class="download-card">
         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        <div class="download-label">Presentation Deck</div>
-        <div class="download-hint">PDF — Judge presentation slides</div>
+        <div class="download-label">Judge Pitch</div>
+        <div class="download-hint">On-page — one-page pitch card below</div>
       </a>
-      <a href="https://github.com" class="download-card" target="_blank">
+      <a href="https://github.com/Deepak2344-coder/SIH-098" class="download-card" target="_blank">
         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         <div class="download-label">Source Code</div>
         <div class="download-hint">GitHub — Simulation &amp; toolchain</div>
       </a>
-      <a href="downloads/ipga-cad.zip" class="download-card" target="_blank">
+      <a href="assets/models/ArtilleryShell.glb" class="download-card" target="_blank">
         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        <div class="download-label">CAD Files</div>
-        <div class="download-hint">ZIP — Assembly &amp; component models</div>
+        <div class="download-label">Shell Model (GLB)</div>
+        <div class="download-hint">GLB — 9-part artillery shell assembly</div>
       </a>
     </div>
     <p class="gallery-note">Place your files in <code>downloads/</code> and update the href attributes above.</p>
@@ -573,18 +695,18 @@
 <!-- APPENDIX / PITCH -->
 <section id="appendix" class="reveal" style="border-bottom:none;">
   <div class="wrap">
-    <div class="kicker">12 — APPENDIX</div>
+    <div class="kicker">14 — APPENDIX</div>
     <h2>One-page judge pitch</h2>
     <div class="pitch-card">
       <div class="pitch-row"><div class="k">PROBLEM</div><div class="v">High-dynamics spinning platforms force sensing, control, power, and comms to share one difficult reference frame.</div></div>
       <div class="pitch-row"><div class="k">SOLUTION</div><div class="v">Separate the guidance reference frame, integrate major functions into the nose, coordinate through phased control and cooperative estimation.</div></div>
-      <div class="pitch-row"><div class="k">PROOF</div><div class="v">CAD, 6-DOF simulation, rotating-interface power test, event-based perception, multi-node estimator.</div></div>
+      <div class="pitch-row"><div class="k">PROOF</div><div class="v">CAD, 6-DOF simulation, six runnable browser simulations (eddy damping, dynamo, ballast, sensor deployment, two GLB viewers), rotating-interface power test, multi-node estimator.</div></div>
       <div class="pitch-row"><div class="k">NOVELTY</div><div class="v">A spin-stabilized body with a stable, self-powered, sensor-rich, network-aware guidance layer — the innovation is the synergy, not any one part.</div></div>
     </div>
   </div>
 </section>
 
-<footer>CONCEPTUAL ACADEMIC PROPOSAL · VERSION 1.0 · REQUIRES SIMULATION, LAB TESTING, AND EXPERT REVIEW BEFORE ANY FIELD USE</footer>
+<footer>CONCEPTUAL ACADEMIC PROPOSAL · IPGA-COMBINED-001 v2.0 · INERT / SIMULATION / LAB ONLY · REQUIRES EXPERT REVIEW BEFORE ANY FIELD USE</footer>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
@@ -592,6 +714,8 @@
   <img class="lightbox-img" id="lightbox-img" src="" alt="">
 </div>
 
+<!-- Embedded shell GLB (base64) shared with simulations/shell-viewer — classic script, loads fine from file:// -->
+<script src="simulations/shell-viewer/js/shell-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

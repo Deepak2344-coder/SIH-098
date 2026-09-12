@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Liquid Balance — Center-of-Mass Tilt Simulation</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app"></div>
+
+<header id="panel-title" class="panel">
+  <h1>LIQUID <span>BALANCE</span></h1>
+  <p>Three-chamber ballast rig on a centre pivot. Pump liquid between the LEFT, RIGHT and BOTTOM tanks and watch the centre of mass move &mdash; the gravity arrow always pulls straight down through it. In DYNAMIC mode the cradle swings like a pendulum until the centre of mass hangs below the pivot. <b>Drag to orbit</b> &middot; <b>scroll to zoom</b>.</p>
+</header>
+
+<section id="panel-readouts" class="panel">
+  <h2>Live measurements</h2>
+  <div class="tank-grid">
+    <div class="tank"><span>LEFT</span><b id="fill-l">0%</b><div class="tbar"><div class="fill" id="fill-bar-l"></div></div></div>
+    <div class="tank"><span>RIGHT</span><b id="fill-r">0%</b><div class="tbar"><div class="fill" id="fill-bar-r"></div></div></div>
+    <div class="tank"><span>BOTTOM</span><b id="fill-b">0%</b><div class="tbar"><div class="fill" id="fill-bar-b"></div></div></div>
+  </div>
+  <div class="read-grid">
+    <div class="read"><span>Centre of mass (x, y)</span><b id="com-out">0.00, 0.00</b></div>
+    <div class="read"><span>Tilt angle &theta;</span><b id="tilt-out">0.0&deg;</b></div>
+    <div class="read"><span>Total mass</span><b id="mass-out">0 kg</b></div>
+    <div class="read"><span>Pump status</span><b id="status-out">IDLE</b></div>
+  </div>
+  <div class="osc-head">Tilt &theta; (yellow) &amp; COM-x (cyan) &mdash; last 15 s</div>
+  <canvas id="graph" width="300" height="140"></canvas>
+</section>
+
+<section id="panel-controls" class="panel">
+  <h2>Controls</h2>
+  <div class="lbl">Pump liquid to:</div>
+  <div class="btn-row">
+    <button id="btn-fill-l" class="btn">LEFT</button>
+    <button id="btn-fill-r" class="btn">RIGHT</button>
+    <button id="btn-fill-b" class="btn">BOTTOM</button>
+  </div>
+  <div class="btn-row">
+    <button id="btn-stop" class="btn">STOP PUMP</button>
+  </div>
+  <label class="ctl">
+    <span>Pump rate <b id="pump-val">1.0 L/s</b></span>
+    <input id="rng-pump" type="range" min="0.1" max="2" step="0.1" value="1"/>
+  </label>
+  <div class="lbl">Mode:</div>
+  <div class="btn-row">
+    <button id="btn-fixed" class="btn primary on">FIXED</button>
+    <button id="btn-dynamic" class="btn primary">DYNAMIC</button>
+  </div>
+  <div class="btn-row">
+    <button id="btn-pause" class="btn">Pause</button>
+    <button id="btn-reset" class="btn">Reset</button>
+  </div>
+  <div class="btn-row">
+    <label class="chk"><input id="chk-flow" type="checkbox" checked/> Flow packets</label>
+    <label class="chk"><input id="chk-labels" type="checkbox" checked/> Labels</label>
+  </div>
+</section>
+
+<section id="panel-legend" class="panel">
+  <h2>Legend</h2>
+  <ul>
+    <li><i style="--c:#8d98a4"></i> Centre rod = pivot axle</li>
+    <li><i style="--c:#3fa9f5"></i> Liquid (9 L total, sealed tanks)</li>
+    <li><i style="--c:#5a6b7d"></i> Transfer tubes + pumps</li>
+    <li><i style="--c:#ffd94a"></i> Centre of mass marker</li>
+    <li><i style="--c:#ff5a50"></i> Gravity arrow (weight at COM)</li>
+    <li><i style="--c:#2b3646"></i> Keel ballast (stabilizer)</li>
+  </ul>
+  <p class="note">COM = &Sigma;mr/&Sigma;m &middot; I&middot;&theta;&#776; = &minus;Mg&middot;x &minus; c&middot;&omega; &middot; sealed tanks: no slosh model.</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="js/physics.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

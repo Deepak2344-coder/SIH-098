@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shell Strike — Smart-Dud Ambush Simulation</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app"></div>
+
+<header id="panel-title" class="panel">
+  <h1>SHELL <span>STRIKE</span></h1>
+  <p>Fire the shell from the howitzer. On impact the nose breaks off and scatters ultrasonic sensor pucks &mdash; the dud lies dormant until a patrol truck enters the sensor field&hellip; then it detonates. Aim with angle + charge to land on the road. <b>Drag to orbit</b> &middot; <b>scroll to zoom</b>.</p>
+</header>
+
+<section id="panel-readouts" class="panel">
+  <h2>Mission status</h2>
+  <div class="read-grid">
+    <div class="read"><span>Phase</span><b id="phase-out">IDLE</b></div>
+    <div class="read"><span>Shell speed / altitude</span><b id="spd-out">—</b></div>
+    <div class="read"><span>Impact point</span><b id="imp-out">—</b></div>
+    <div class="read"><span>Sensors / truck</span><b id="sens-out">—</b></div>
+    <div class="read" style="display:none"><span>Calib</span><b id="calib-out">—</b></div>
+  </div>
+  <div class="osc-head">Event log</div>
+  <ul id="log-list"></ul>
+</section>
+
+<section id="panel-controls" class="panel">
+  <h2>Fire control</h2>
+  <label class="ctl">
+    <span>Launch angle <b id="angle-val">45°</b></span>
+    <input id="rng-angle" type="range" min="20" max="65" step="1" value="45"/>
+  </label>
+  <label class="ctl">
+    <span>Muzzle velocity <b id="vel-val">25 m/s</b></span>
+    <input id="rng-vel" type="range" min="15" max="40" step="1" value="25"/>
+  </label>
+  <label class="ctl">
+    <span>Sensor radius <b id="sens-val">5 m</b></span>
+    <input id="rng-sens" type="range" min="3" max="8" step="0.5" value="5"/>
+  </label>
+  <div class="btn-row">
+    <button id="btn-fire" class="btn primary big">FIRE</button>
+    <button id="btn-reset" class="btn">Reset</button>
+  </div>
+  <div class="btn-row">
+    <label class="chk"><input id="chk-follow" type="checkbox" checked/> Follow cam</label>
+    <button id="btn-mute" class="btn small">Mute</button>
+  </div>
+</section>
+
+<section id="panel-legend" class="panel">
+  <h2>Legend</h2>
+  <ul>
+    <li><i style="--c:#5a6b4a"></i> Howitzer + truck (army green)</li>
+    <li><i style="--c:#4b5320"></i> Shell body (military green)</li>
+    <li><i style="--c:#c8ccd2"></i> Shell wings (silver)</li>
+    <li><i style="--c:#4dd8ff"></i> Ultrasonic sensor pucks</li>
+    <li><i style="--c:#ff5a50"></i> Lethal radius / explosion</li>
+  </ul>
+  <p class="note">Range &asymp; v&sup2;sin2&theta;/g (minus drag) &middot; shell enlarged &times;2.5 for visibility.</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="js/shell-data.js"></script>
+<script src="js/scenario.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

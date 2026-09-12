@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flux Generator — 3D Electromagnetic Dynamo Simulation</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app"></div>
+
+<header id="panel-title" class="panel">
+  <h1>FLUX <span>GENERATOR</span></h1>
+  <p>Three-dimensional electromagnetic dynamo. A spinning armature coil cuts the magnetic field between two poles &mdash; the changing flux induces an alternating EMF (Faraday&rsquo;s law), which a bridge rectifier turns into DC for the bulb. <b>Drag to orbit</b> &middot; <b>scroll to zoom</b>.</p>
+</header>
+
+<section id="panel-readouts" class="panel">
+  <h2>Live measurements</h2>
+  <div class="read-grid">
+    <div class="read"><span>Rotor speed</span><b id="rpm-out">480 RPM</b></div>
+    <div class="read"><span>Angular velocity &omega;</span><b id="ang-out">0.00 rad/s</b></div>
+    <div class="read"><span>Rotor angle &theta;</span><b id="theta-out">0.0&deg; &middot; 0.0 rev</b></div>
+    <div class="read"><span>Magnetic flux &Phi;(&theta;)</span><b id="flux-out">0.000 mWb</b></div>
+    <div class="read"><span>Induced EMF &epsilon;</span><b id="emf-out">0.000 V AC</b></div>
+    <div class="read wide"><span>Rectified DC &rarr; bulb</span><b id="dc-out">0%</b><div class="dcbar"><div class="fill" id="dc-bar"></div></div></div>
+  </div>
+  <div class="osc-head">Flux (cyan) &amp; EMF (orange) vs rotor angle &mdash; last 2 rotations</div>
+  <canvas id="osc" width="300" height="140"></canvas>
+</section>
+
+<section id="panel-controls" class="panel">
+  <h2>Controls</h2>
+  <label class="ctl">
+    <span>Rotor speed <b id="spd-val">480 RPM</b></span>
+    <input id="rng-speed" type="range" min="0" max="1500" step="10" value="480"/>
+  </label>
+  <label class="ctl">
+    <span>Magnetic field strength B <b id="fld-val">0.35 T</b></span>
+    <input id="rng-field" type="range" min="0" max="0.8" step="0.01" value="0.35"/>
+  </label>
+  <div class="btn-row">
+    <button id="btn-pause" class="btn primary">Pause</button>
+    <button id="btn-reset" class="btn">Reset angle</button>
+  </div>
+  <div class="btn-row">
+    <label class="chk"><input id="chk-field" type="checkbox" checked/> Magnetic field lines</label>
+    <label class="chk"><input id="chk-energy" type="checkbox" checked/> Energy packets</label>
+  </div>
+</section>
+
+<section id="panel-legend" class="panel">
+  <h2>Legend</h2>
+  <ul>
+    <li><i style="--c:#8d98a4"></i> Rotor drum (spins with coil)</li>
+    <li><i style="--c:#e08b4d"></i> Armature coil &mdash; 8 turns (spins)</li>
+    <li><i style="--c:#ff5a5a"></i> North pole magnet</li>
+    <li><i style="--c:#4d7dff"></i> South pole magnet</li>
+    <li><i style="--c:#4fc3f7"></i> Magnetic field lines (N &rarr; S)</li>
+    <li><i style="--c:#c8a15b"></i> Slip rings &amp; brushes</li>
+    <li><i style="--c:#2e3b47"></i> AC &rarr; DC bridge rectifier</li>
+    <li><i style="--c:#ffd94a"></i> Electric current (energy packets)</li>
+    <li><i style="--c:#ffd9a0"></i> Bulb filament (pulses in step)</li>
+  </ul>
+  <p class="note">&#949; = &minus;d&Phi;/dt &middot; &Phi; = N&middot;B&middot;A&middot;cos&theta;. Geometry is illustrative, not to physical scale.</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="js/physics.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
