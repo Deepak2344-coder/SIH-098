@@ -20,6 +20,7 @@
     <div class="navlinks">
       <a href="#research">Research</a>
       <a href="#pillars">Pillars</a>
+      <a href="#seeker-demo">Seeker Demo</a>
       <a href="#specs">Evidence</a>
       <a href="#simulations">Simulations</a>
       <a href="#3d-model">3D Model</a>
@@ -300,10 +301,26 @@
   </div>
 </section>
 
+<!-- SEEKER DEMO -->
+<section id="seeker-demo" class="reveal">
+  <div class="wrap">
+    <div class="kicker">05 — SEEKER DEMO</div>
+    <h2>Event camera + Kalman filter, on video</h2>
+    <p class="intro">Recorded demonstration of the EDTS concept (Pillar 03): a neuromorphic event camera observing a moving target, its asynchronous event stream fused through a Kalman filter into a stable track — the perception layer the despun nose exists to carry.</p>
+    <div class="video-frame">
+      <video controls preload="metadata" playsinline>
+        <source src="assets/video/neuromorphic-kalman-demo.mp4" type="video/mp4">
+        Your browser cannot play this video. Download it from <a href="assets/video/neuromorphic-kalman-demo.mp4">assets/video/neuromorphic-kalman-demo.mp4</a>.
+      </video>
+    </div>
+    <p class="gallery-note">FILE — <code>assets/video/neuromorphic-kalman-demo.mp4</code> · plays from file:// and from static hosting, no server required.</p>
+  </div>
+</section>
+
 <!-- EVIDENCE MATRIX -->
 <section id="specs" class="reveal">
   <div class="wrap">
-    <div class="kicker">05 — EVIDENCE MATRIX</div>
+    <div class="kicker">06 — EVIDENCE MATRIX</div>
     <h2>Every claim points at a runnable artifact</h2>
     <p class="intro">No headline performance numbers are asserted — per the proposal, those remain unvalidated hypotheses (§2.2). What exists today is listed below: proposal sections you can read and simulations you can run.</p>
     <div class="specs-table-wrap">
@@ -354,7 +371,13 @@
             <td><span class="status-badge live">Live</span></td>
           </tr>
           <tr>
-            <td><span class="spec-code">EDTS</span> / <span class="spec-code">CSMN</span> / <span class="spec-code">MCMA</span></td>
+            <td><span class="spec-code">EDTS</span> Terminal Seeker</td>
+            <td>Recorded demo: neuromorphic event stream fused via Kalman filter into a stable track</td>
+            <td><a href="#seeker-demo">demo video ↓</a></td>
+            <td><span class="status-badge live">Live</span></td>
+          </tr>
+          <tr>
+            <td><span class="spec-code">CSMN</span> / <span class="spec-code">MCMA</span></td>
             <td>Defined with test methods in proposal §§4–5; no interactive sim yet</td>
             <td><a href="downloads/IPGA-Research-Proposal.pdf" target="_blank" rel="noopener">proposal PDF ↗</a></td>
             <td><span class="status-badge proposal">Proposal</span></td>
@@ -379,7 +402,7 @@
 <!-- SYNERGY -->
 <section id="synergy" class="reveal">
   <div class="wrap">
-    <div class="kicker">06 — SYSTEM SYNERGY</div>
+    <div class="kicker">07 — SYSTEM SYNERGY</div>
     <h2>Removing bottlenecks, not stacking features</h2>
     <div class="synergy">
       <div class="cell"><div class="from">DNA → EDTS / SHAF-G / MCMA</div><div class="effect">Stable sensing reference, usable relative rotation, better antenna integration.</div></div>
@@ -398,7 +421,7 @@
 <!-- SIMULATIONS -->
 <section id="simulations" class="reveal">
   <div class="wrap">
-    <div class="kicker">07 — INTERACTIVE SIMULATIONS</div>
+    <div class="kicker">08 — INTERACTIVE SIMULATIONS</div>
     <h2>Run the evidence yourself</h2>
     <p class="intro">Each simulation lives in its own folder under <code>simulations/</code> — untouched, with all internal <code>css/</code> and <code>js/</code> connections intact. Open any card in a new tab: no build step, no local server, just a browser with internet access for the three.js CDN. The two GLB-based viewers carry their models embedded as base64, so they render straight from <code>file://</code>.</p>
     <div class="sim-grid">
@@ -452,7 +475,7 @@
 <!-- DEMO PLAN -->
 <section id="plan" class="reveal">
   <div class="wrap">
-    <div class="kicker">08 — DEMONSTRATION PLAN</div>
+    <div class="kicker">09 — DEMONSTRATION PLAN</div>
     <h2>What we actually build and prove for SIH</h2>
     <div class="stages">
       <div class="stage"><div class="snum"></div><div><div class="stitle">Architecture — CAD cross-section</div><div class="sdesc">Nose, bearing interface, channels, generator, conformal aperture. Produces mass, volume, and failure-mode map.</div></div><span class="badge">ESSENTIAL</span></div>
@@ -469,7 +492,7 @@
 
 <section id="downloads" class="reveal">
   <div class="wrap">
-    <div class="kicker">09 — RESOURCES</div>
+    <div class="kicker">10 — RESOURCES</div>
     <h2>Download project materials</h2>
     <div class="downloads-grid">
       <a href="downloads/IPGA-Research-Proposal.pdf" class="download-card" target="_blank">
@@ -500,7 +523,7 @@
 <!-- APPENDIX / PITCH -->
 <section id="appendix" class="reveal" style="border-bottom:none;">
   <div class="wrap">
-    <div class="kicker">10 — APPENDIX</div>
+    <div class="kicker">11 — APPENDIX</div>
     <h2>One-page judge pitch</h2>
     <div class="pitch-card">
       <div class="pitch-row"><div class="k">PROBLEM</div><div class="v">High-dynamics spinning platforms force sensing, control, power, and comms to share one difficult reference frame.</div></div>

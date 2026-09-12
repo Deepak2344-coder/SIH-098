@@ -335,3 +335,10 @@ footer{
 }
 .open-btn:hover{ background:var(--cyan); color:#12120C; }
 @media (max-width:700px){ .sim-grid{ grid-template-columns:1fr; } }
+
+/* SEEKER DEMO VIDEO */
+.video-frame{
+  background:#000; border:1px solid var(--line); border-top:3px solid var(--cyan);
+  border-radius:0; overflow:hidden;
+}
+.video-frame video{ display:block; width:100%; max-height:560px; background:#000; }
