@@ -31,39 +31,6 @@
     });
   }
 
-  /* ── Gallery Lightbox ──────────────────────────────────────── */
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-
-  if (lightbox && lightboxImg) {
-    document.querySelectorAll('.gallery-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const src = card.getAttribute('data-lightbox');
-        if (src) {
-          lightboxImg.src = src;
-          lightbox.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        }
-      });
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-        lightboxImg.src = '';
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-        lightboxImg.src = '';
-      }
-    });
-  }
-
   /* ── 3D Model Viewer: file://-safe GLB source ────────────────
      model-viewer fetches `src` over HTTP, which file:// pages block
      via CORS. shell-data.js (shared with simulations/shell-viewer)
